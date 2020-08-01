@@ -25,7 +25,9 @@ SECRET_KEY = 'ibfgh2o!152o=^a^ek(q0bc6tqtyj%oxi2tycs$cey^)!@#c0='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '0.0.0.0',
+]
 
 
 # Application definition
@@ -105,6 +107,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
+    'http://0.0.0.0:3000',
 ]
 
 # Internationalization

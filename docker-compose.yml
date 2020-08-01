@@ -1,0 +1,20 @@
+version: '3.7'
+  
+services:
+  db:
+    image: mysql
+    environment: 
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+  django-backend:
+    container_name: django-backend
+    image: django-rest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    tty: true
+    depends_on:
+      - db
